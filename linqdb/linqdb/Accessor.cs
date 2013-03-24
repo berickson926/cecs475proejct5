@@ -11,7 +11,7 @@ namespace linqdb
         
         public static System.Data.Linq.Table<Author> GetAuthorsTable()
         {
-             BooksDataContext dc = new BooksDataContext();
+            BooksDataContext dc = new BooksDataContext();
             return dc.GetTable<Author>();
         }
         public static void InsertOrUpdateAuthor(string first, string last)
@@ -56,7 +56,25 @@ namespace linqdb
         public static System.Data.Linq.Table<AuthorISBN> getAuthorISBNTable()
         {
             BooksDataContext dc = new BooksDataContext();
+
+            //var authID = (from a in dc.GetTable<Author>()
+            //              where 
+
+
             return dc.GetTable<AuthorISBN>();
+        }
+
+        public static String getAuthorByID(string id)
+        {
+
+
+            return "";
+        }
+
+        public static String getAuthorByLastName(String last)
+        {
+
+            return "";
         }
     }
 }

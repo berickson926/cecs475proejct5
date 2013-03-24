@@ -77,11 +77,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Books.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\QueryAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\QueryAuthor.Designer.cs">
+      <DependentUpon>QueryAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\QueryTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\QueryTitle.Designer.cs">
+      <DependentUpon>QueryTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\ReadAuthorChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\ReadAuthorChildForm.Designer.cs">
       <DependentUpon>ReadAuthorChildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ReadAuthorISBNChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ReadAuthorISBNChildForm.Designer.cs">
+      <DependentUpon>ReadAuthorISBNChildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ReadTitlesChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ReadTitlesChildForm.Designer.cs">
+      <DependentUpon>ReadTitlesChildForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -95,8 +119,20 @@
     <None Include="Books.dbml.layout">
       <DependentUpon>Books.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="ChildForms\QueryAuthor.resx">
+      <DependentUpon>QueryAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\QueryTitle.resx">
+      <DependentUpon>QueryTitle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ReadAuthorChildForm.resx">
       <DependentUpon>ReadAuthorChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ReadAuthorISBNChildForm.resx">
+      <DependentUpon>ReadAuthorISBNChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ReadTitlesChildForm.resx">
+      <DependentUpon>ReadTitlesChildForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

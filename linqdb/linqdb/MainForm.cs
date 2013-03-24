@@ -24,9 +24,6 @@ namespace linqdb
             child.MdiParent = this;
 
             child.Show();
-
-            //System.Data.Linq.Table<Author> authors = Accessor.GetAuthorsTable();
-           // dataGridView1.DataSource = authors;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,15 +31,15 @@ namespace linqdb
 
         }
 
-        //private void insertToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Accessor.InsertOrUpdateAuthor("phuong", "nguyen");
-        //}
+        private void insertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Accessor.InsertOrUpdateAuthor("phuong", "nguyen");
+        }
 
-        //private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Accessor.DeleteAuthor(5);
-        //}
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Accessor.DeleteAuthor(5);
+        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,20 +48,40 @@ namespace linqdb
 
         private void TitlesToolstripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Data.Linq.Table<Title> titles = Accessor.getTitlesTable();
-            //dataGridView1.DataSource = titles;
-            
+            Form child = new ReadTitlesChildForm();
+
+            child.MdiParent = this;
+
+            child.Show();     
         }
 
         private void authorISBNSToolstripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Data.Linq.Table<AuthorISBN> authorISBNs = Accessor.getAuthorISBNTable();
-            //dataGridView1.DataSource = authorISBNs;
+            Form child = new ReadAuthorISBNChildForm();
+
+            child.MdiParent = this;
+
+            child.Show();
         }
 
-        private void queriesToolstripMenuItem_Click(object sender, EventArgs e)
+        private void SearchForAuthorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form child = new QueryAuthor();
 
+            child.MdiParent = this;
+
+            child.Show();
         }
-    }
-}
+
+        private void SearchForTitleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form child = new QueryTitle();
+
+            child.MdiParent = this;
+
+            child.Show();
+        }
+
+
+    }//end MainForm partial class
+}//end namespace Linqdb
