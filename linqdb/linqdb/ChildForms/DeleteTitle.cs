@@ -9,13 +9,11 @@ using System.Windows.Forms;
 
 namespace linqdb.ChildForms
 {
-    public partial class ReadAuthorISBNChildForm : Form
+    public partial class DeleteTitle : Form
     {
-        public ReadAuthorISBNChildForm()
+        public DeleteTitle()
         {
             InitializeComponent();
-
-            dataGridView.DataSource = Accessor.getAuthorISBNTable();
         }
     }
 }

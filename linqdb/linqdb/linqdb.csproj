@@ -77,11 +77,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Books.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\DeleteAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DeleteAuthor.Designer.cs">
+      <DependentUpon>DeleteAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\DeleteTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DeleteTitle.Designer.cs">
+      <DependentUpon>DeleteTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\InsertAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\InsertAuthor.Designer.cs">
+      <DependentUpon>InsertAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\InsertTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\InsertTitle.Designer.cs">
+      <DependentUpon>InsertTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\MasterDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\MasterDetail.Designer.cs">
+      <DependentUpon>MasterDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\QueryAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\QueryAuthor.Designer.cs">
       <DependentUpon>QueryAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\QueryAuthorAndISBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\QueryAuthorAndISBN.Designer.cs">
+      <DependentUpon>QueryAuthorAndISBN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\QueryAuthorAndTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\QueryAuthorAndTitle.Designer.cs">
+      <DependentUpon>QueryAuthorAndTitle.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\QueryTitle.cs">
       <SubType>Form</SubType>
@@ -107,6 +149,18 @@
     <Compile Include="ChildForms\ReadTitlesChildForm.Designer.cs">
       <DependentUpon>ReadTitlesChildForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\UpdateAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\UpdateAuthor.Designer.cs">
+      <DependentUpon>UpdateAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\UpdateTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\UpdateTitle.Designer.cs">
+      <DependentUpon>UpdateTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +173,12 @@
     <None Include="Books.dbml.layout">
       <DependentUpon>Books.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="ChildForms\DeleteAuthor.resx">
+      <DependentUpon>DeleteAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\MasterDetail.resx">
+      <DependentUpon>MasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\QueryAuthor.resx">
       <DependentUpon>QueryAuthor.cs</DependentUpon>
     </EmbeddedResource>

@@ -9,13 +9,11 @@ using System.Windows.Forms;
 
 namespace linqdb.ChildForms
 {
-    public partial class ReadAuthorISBNChildForm : Form
+    public partial class InsertTitle : Form
     {
-        public ReadAuthorISBNChildForm()
+        public InsertTitle()
         {
             InitializeComponent();
-
-            dataGridView.DataSource = Accessor.getAuthorISBNTable();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace linqdb.ChildForms
         {
             //Enable user controls for the search
             ParameterLabel.Visible = true;
-            ParameterTextBox.Visible = true;
+            TitleTextBox.Visible = true;
             SearchButton.Visible = true;
         }
 
@@ -28,15 +28,24 @@ namespace linqdb.ChildForms
         {
             //Hide controls not relevant to this function
             ParameterLabel.Visible = false;
-            ParameterTextBox.Visible = false;
+            TitleTextBox.Visible = false;
             SearchButton.Visible = false;
 
             //autopull all data sorted by copyright into datagrid
+            dataGridView.DataSource = Accessor.getTitlesByCopyright();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dataGridView.DataSource = Accessor.getBooksByTitle(TitleTextBox.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Author not found!");
+            }
+        }//end SearchButton_Click
 
-        }
-    }
-}
+    }//end class QueryTitle
+}//End namespace linqdb.childform

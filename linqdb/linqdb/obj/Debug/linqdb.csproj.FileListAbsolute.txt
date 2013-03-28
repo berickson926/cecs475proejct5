@@ -26,3 +26,5 @@ C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\l
 C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.ReadAuthorISBNChildForm.resources
 C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.QueryAuthor.resources
 C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.QueryTitle.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.MasterDetail.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.DeleteAuthor.resources

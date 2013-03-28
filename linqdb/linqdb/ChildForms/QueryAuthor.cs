@@ -36,15 +36,14 @@ namespace linqdb.ChildForms
             {
                 //Search by ID
                 if (searchType)
-                    MessageBox.Show(Accessor.getAuthorByID(parameterBox.Text));
+                    MessageBox.Show(Accessor.getAuthorByID(parameterBox.Text).ToString());
                 else//search by last name
                 {
-                    MessageBox.Show(Accessor.getAuthorByLastName(parameterBox.Text));
+                    MessageBox.Show(Accessor.getAuthorByLastName(parameterBox.Text).ToString());
                 }//end else
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Author not found!");
             }
         }//end SearchBtn_Click
