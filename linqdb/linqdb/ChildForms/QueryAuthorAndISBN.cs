@@ -14,6 +14,8 @@ namespace linqdb.ChildForms
         public QueryAuthorAndISBN()
         {
             InitializeComponent();
+
+            dataGridView.DataSource = Accessor.getAuthorByISBN();
         }
     }
 }

@@ -38,15 +38,62 @@ namespace linqdb
             dc.SubmitChanges();
         }
 
-        public static void insertOrUpdateTitle(string isbn, string title)
+        public static void insertOrUpdateTitle(string isbn, string title, int edition, string copyright)
         {
+            BooksDataContext dc = new BooksDataContext();
 
+            Table<Title> titles = Accessor.getTitlesTable();
+            Title t = new Title();
+
+            t.ISBN = isbn;
+            t.BookTitle = title;
+            t.EditionNumber = edition;
+            t.Copyright = copyright;
+
+            titles.InsertOnSubmit(t);
+            titles.Context.SubmitChanges();
+            dc.SubmitChanges();
         }
 
-        public static void deleteTitle(string isbn, string title)
+        public static void deleteTitle(string isbn)
         {
-
+            BooksDataContext dc = new BooksDataContext();
+            var matchedTitle = (from t in dc.GetTable<Title>()
+                                 where t.ISBN == isbn
+                                 select t).SingleOrDefault();
+            dc.Titles.DeleteOnSubmit(matchedTitle);
+            dc.SubmitChanges();
         }
+
+        public static void InsertOrUpdateAuthorISBN(string isbn, int id)
+        {
+            BooksDataContext dc = new BooksDataContext();
+
+            Table<AuthorISBN> authorISBNs = dc.GetTable<AuthorISBN>();
+
+            AuthorISBN a = new AuthorISBN();
+
+            a.AuthorID = id;
+            a.ISBN = isbn;
+
+            authorISBNs.InsertOnSubmit(a);
+            authorISBNs.Context.SubmitChanges();
+            dc.SubmitChanges();
+
+        }//end insertorupdateauthorisbn
+
+        public static void DeleteAuthorISBN(string isbn, int id)
+        {
+            BooksDataContext dc = new BooksDataContext();
+
+            var matchedAuthorISBN = (from authorisbn in dc.GetTable<AuthorISBN>()
+                                     where authorisbn.ISBN == isbn && authorisbn.AuthorID == id
+                                     select authorisbn).SingleOrDefault();
+
+            dc.AuthorISBNs.DeleteOnSubmit(matchedAuthorISBN);
+            dc.SubmitChanges();
+
+        }//end deleteauthorisbn
 
         public static System.Data.Linq.Table<Title> getTitlesTable()
         {
@@ -167,5 +214,78 @@ namespace linqdb
             return bookByTitle;
 
         }//end getBooksByTitle
-    }
+
+        public static System.Linq.IQueryable getAuthorByISBN()
+        {
+            BooksDataContext dc = new BooksDataContext();
+
+            var authISBN = (from author in dc.GetTable<Author>()
+                            join book in dc.GetTable<AuthorISBN>()
+                                on author.AuthorID equals book.AuthorID
+                            orderby author.LastName, author.FirstName
+                            select new { author.FirstName, author.LastName, book.ISBN });
+
+            return authISBN;
+
+        }//end getAuthorByISBN
+
+
+        public static RichTextBox getAuthorsAndTitles()
+        {
+            BooksDataContext dc = new BooksDataContext();
+
+            var authTitle = (from title in dc.GetTable<Title>()
+                             from book in dc.GetTable<AuthorISBN>()
+                             let author = book.Author
+                             orderby author.LastName, author.FirstName, title.BookTitle
+                             select new { author.FirstName, author.LastName, title.BookTitle });
+
+            RichTextBox temp = new RichTextBox();
+            temp.AppendText("Authors and titles:\n\n");
+
+            foreach (var element in authTitle)
+            {
+                temp.AppendText(String.Format("\t{0,-10} {1,-15} {2}\n", element.FirstName, element.LastName, element.BookTitle));
+            }
+
+            return temp;
+
+        }//end getAuthorsAndTitles
+
+        public static RichTextBox getAuthorAndTitles_GroupByAuthor()
+        {
+            BooksDataContext dc = new BooksDataContext();
+
+            var authTitle = (from author in dc.GetTable<Author>()
+                             orderby author.LastName, author.FirstName
+                             let name = author.FirstName + " " + author.LastName 
+                             let titles =  
+                                 from book in author.AuthorISBNs
+                                 orderby book.Title.BookTitle 
+                                 select book.Title.BookTitle
+                             select new { Name = name, Titles = titles });
+            
+            RichTextBox temp = new RichTextBox();
+
+            temp.AppendText("Titles Grouped by Author:\n");
+            
+
+            // display titles written by each author, grouped by author 
+            foreach ( var author in authTitle ) 
+            { 
+                // display author's name 
+                temp.AppendText("\t" + author.Name + ":\n"); 
+
+                // display titles written by that author 
+                foreach ( var title in author.Titles ) 
+                {
+                    temp.AppendText("\t\t" + title+"\n"); 
+                } // end inner foreach 
+            } // end outer foreach 
+
+            return temp;
+
+        }//end getAuthorAndTitles
+
+    }//end class Accessor
 }

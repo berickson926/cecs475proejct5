@@ -15,5 +15,31 @@ namespace linqdb.ChildForms
         {
             InitializeComponent();
         }
-    }
-}
+
+        private void authorTitleSearch_Load(object sender, EventArgs e)
+        {
+
+        }//end authorTitleSearch_Load
+
+        private void noneRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            //richTextBox.DataSource = Accessor.getAuthorsAndTitles();
+
+            richTextBox.Clear();
+
+            richTextBox.Text = Accessor.getAuthorsAndTitles().Text;
+  
+        }//end noneRadioButton_CheckedChanged
+
+        private void authorRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            //dataGridView.DataSource = Accessor.getAuthorAndTitles_GroupByAuthor();
+
+            richTextBox.Clear();
+
+            richTextBox.Text = Accessor.getAuthorAndTitles_GroupByAuthor().Text;
+
+        }//end authorRadioButton_CheckedChanged
+
+    }//end QueryAuthorAndTitle
+}//end namespace linqdb.ChildForms

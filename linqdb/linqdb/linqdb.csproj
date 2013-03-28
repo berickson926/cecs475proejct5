@@ -83,6 +83,12 @@
     <Compile Include="ChildForms\DeleteAuthor.Designer.cs">
       <DependentUpon>DeleteAuthor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\DeleteAuthorISBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DeleteAuthorISBN.Designer.cs">
+      <DependentUpon>DeleteAuthorISBN.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\DeleteTitle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="ChildForms\InsertAuthor.Designer.cs">
       <DependentUpon>InsertAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\InsertAuthorISBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\InsertAuthorISBN.Designer.cs">
+      <DependentUpon>InsertAuthorISBN.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\InsertTitle.cs">
       <SubType>Form</SubType>
@@ -155,6 +167,12 @@
     <Compile Include="ChildForms\UpdateAuthor.Designer.cs">
       <DependentUpon>UpdateAuthor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\UpdateAuthorISBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\UpdateAuthorISBN.Designer.cs">
+      <DependentUpon>UpdateAuthorISBN.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\UpdateTitle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,11 +194,32 @@
     <EmbeddedResource Include="ChildForms\DeleteAuthor.resx">
       <DependentUpon>DeleteAuthor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DeleteAuthorISBN.resx">
+      <DependentUpon>DeleteAuthorISBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DeleteTitle.resx">
+      <DependentUpon>DeleteTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\InsertAuthor.resx">
+      <DependentUpon>InsertAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\InsertAuthorISBN.resx">
+      <DependentUpon>InsertAuthorISBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\InsertTitle.resx">
+      <DependentUpon>InsertTitle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\MasterDetail.resx">
       <DependentUpon>MasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\QueryAuthor.resx">
       <DependentUpon>QueryAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\QueryAuthorAndISBN.resx">
+      <DependentUpon>QueryAuthorAndISBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\QueryAuthorAndTitle.resx">
+      <DependentUpon>QueryAuthorAndTitle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\QueryTitle.resx">
       <DependentUpon>QueryTitle.cs</DependentUpon>
@@ -193,6 +232,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ReadTitlesChildForm.resx">
       <DependentUpon>ReadTitlesChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\UpdateAuthor.resx">
+      <DependentUpon>UpdateAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\UpdateAuthorISBN.resx">
+      <DependentUpon>UpdateAuthorISBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\UpdateTitle.resx">
+      <DependentUpon>UpdateTitle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

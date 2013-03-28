@@ -170,6 +170,33 @@ namespace linqdb
             child.Show();
         }
 
+        private void authorISBNToolstripMenuitem_Click(object sender, EventArgs e)
+        {
+            Form child = new InsertAuthorISBN();
+
+            child.MdiParent = this;
+
+            child.Show();
+        }
+
+        private void updateAuthorISBNToolstripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form child = new UpdateAuthorISBN();
+
+            child.MdiParent = this;
+
+            child.Show();
+        }
+
+        private void deleteAuthorISBNToolstripMenuitem_Click(object sender, EventArgs e)
+        {
+            Form child = new DeleteAuthorISBN();
+
+            child.MdiParent = this;
+
+            child.Show();
+        }
+
         /****************************End modify data*********************************/
 
 

@@ -15,5 +15,32 @@ namespace linqdb.ChildForms
         {
             InitializeComponent();
         }
-    }
+
+        private void InsertAuthor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addAuthorButton_Click(object sender, EventArgs e)
+        {
+            string first, last;
+
+            first = firstNameTextBox.Text;
+            last = lastNameTextBox.Text;
+
+            if (first.Length > 0 && last.Length > 0)
+            {
+                Accessor.InsertOrUpdateAuthor(first, last);
+
+                MessageBox.Show("Author added!");
+
+                firstNameTextBox.Text = "";
+                lastNameTextBox.Text = "";
+            }
+            else
+                MessageBox.Show("Invalid entry, try again.");
+
+        }//end addAuthorButton_Click
+
+    }//end class InsertAuthor
 }

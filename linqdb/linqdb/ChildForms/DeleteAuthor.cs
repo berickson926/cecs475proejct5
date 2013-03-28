@@ -15,5 +15,20 @@ namespace linqdb.ChildForms
         {
             InitializeComponent();
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Accessor.DeleteAuthor(Int32.Parse(authorIDTextBox.Text));
+
+                MessageBox.Show("Success");
+                authorIDTextBox.Text = "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Deletion Failed.");
+            }
+        }
     }
 }

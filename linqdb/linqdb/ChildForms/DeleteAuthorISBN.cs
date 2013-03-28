@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace linqdb.ChildForms
 {
-    public partial class DeleteTitle : Form
+    public partial class DeleteAuthorISBN : Form
     {
-        public DeleteTitle()
+        public DeleteAuthorISBN()
         {
             InitializeComponent();
         }
@@ -20,13 +20,19 @@ namespace linqdb.ChildForms
         {
             try
             {
-                string isbn = ISBNTextBox.Text;
+                string isbn, id;
 
-                Accessor.deleteTitle(isbn);
+                //Grab user input from GUI
+                isbn = ISBNTextBox.Text;
+                id = AuthorIDTextBox.Text;
 
-                MessageBox.Show("Title deleted.");
+                //Attempt deletion in DB
+                Accessor.DeleteAuthorISBN(isbn, Int32.Parse(id));
 
+                //Notify user & Cleanup GUI
+                MessageBox.Show("Deletion successful.");
                 ISBNTextBox.Text = "";
+                AuthorIDTextBox.Text = "";
             }
             catch (Exception)
             {

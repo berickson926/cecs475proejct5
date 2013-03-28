@@ -28,3 +28,13 @@ C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\l
 C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.QueryTitle.resources
 C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.MasterDetail.resources
 C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.DeleteAuthor.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.QueryAuthorAndTitle.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.QueryAuthorAndISBN.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.InsertAuthor.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.DeleteTitle.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.InsertAuthorISBN.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.InsertTitle.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.UpdateAuthor.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.UpdateAuthorISBN.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.UpdateTitle.resources
+C:\Users\Bret_Erickson\Dropbox\cecs475\cecs475proejct5\linqdb\linqdb\obj\Debug\linqdb.ChildForms.DeleteAuthorISBN.resources

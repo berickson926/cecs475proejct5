@@ -15,5 +15,34 @@ namespace linqdb.ChildForms
         {
             InitializeComponent();
         }
+
+        private void InsertButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string isbn, name, copyright;
+                int edition;
+
+                isbn = ISBNTextBox.Text;
+                name = BookTitleTextBox.Text;
+                copyright = CopyrightTextBox.Text;
+
+                edition = Int32.Parse(EditionTextBox.Text);
+
+                Accessor.insertOrUpdateTitle(isbn, name, edition, copyright);
+
+                MessageBox.Show("Title Added.");
+
+                ISBNTextBox.Text = "";
+                BookTitleTextBox.Text = "";
+                CopyrightTextBox.Text = "";
+                EditionTextBox.Text = "";
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Unable to Insert Title");
+            }
+        }
     }
 }
